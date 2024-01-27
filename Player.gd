@@ -11,7 +11,8 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.play("idle");
 	
-	
+
+
 
 
 
