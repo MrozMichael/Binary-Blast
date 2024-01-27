@@ -17,6 +17,11 @@ func _process(delta):
 		velocity.x -= 1;
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1;
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed;
+		$AnimatedSprite2D.play("move")
+	else:
+		$AnimatedSprite2D.play("idle")
 	position += velocity * delta;
 	position = position.clamp(Vector2.ZERO, screen_size);
 	

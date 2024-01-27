@@ -1224,7 +1224,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_j3d04")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_mf0p1")
 }, {
@@ -1250,8 +1255,8 @@ animations = [{
 "texture": ExtResource("10_ebell")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"move",
+"speed": 10.0
 }]
 
 [node name="Main" type="Node2D"]
@@ -1274,7 +1279,6 @@ shape = SubResource("CapsuleShape2D_uila4")
 position = Vector2(130, 216)
 scale = Vector2(0.760417, 0.733398)
 sprite_frames = SubResource("SpriteFrames_tchu8")
-frame = 2
-frame_progress = 0.579165
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
