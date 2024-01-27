@@ -25,6 +25,7 @@ func _process(delta):
 	position += velocity * delta;
 	position = position.clamp(Vector2.ZERO, screen_size);
 	
+	
 
 
 	
