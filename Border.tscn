@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ylbre3srebf1"]
+
+[ext_resource type="Texture2D" uid="uid://bubicwdmgq2mg" path="res://assets/kenney_background-elements-redux/PNG/Default/castleWallAlt.png" id="1_72yjr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfet2"]
+size = Vector2(24.4527, 23.7914)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(1.14286, 0.91542)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(202.307, 32.3643)
+scale = Vector2(16.5885, 2.8125)
+shape = SubResource("RectangleShape2D_cfet2")
+
+[node name="CastleWallAlt" type="Sprite2D" parent="."]
+position = Vector2(200.375, 32.7718)
+scale = Vector2(6.62345, 1)
+texture = ExtResource("1_72yjr")

@@ -1,14 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxnfpe77ug6v1"]
+[gd_scene load_steps=4 format=3 uid="uid://cxnfpe77ug6v1"]
 
+[ext_resource type="PackedScene" uid="uid://ylbre3srebf1" path="res://Border.tscn" id="1_jkhq4"]
 [ext_resource type="PackedScene" uid="uid://pyria0kjh4oq" path="res://Player.tscn" id="2_f0dyv"]
+[ext_resource type="Texture2D" uid="uid://be1apljbonl1h" path="res://assets/kenney_background-elements-redux/PNG/Default/bushOrange2.png" id="3_a2ij7"]
 
 [node name="Main" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-531.0]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 2.99997
 offset_top = 2.0
 offset_right = 74.0
@@ -19,3 +18,53 @@ color = Color(0.478431, 0.827451, 0.54902, 0.8)
 [node name="Player" parent="." instance=ExtResource("2_f0dyv")]
 z_index = 1
 position = Vector2(787, -3)
+collision_layer = 2
+
+[node name="BushOrange19" type="Sprite2D" parent="."]
+position = Vector2(913, 579)
+texture = ExtResource("3_a2ij7")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(-1, -62)
+scale = Vector2(1.12307, 1.02283)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(463, 829)
+rotation = 3.14159
+scale = Vector2(1.33569, 1.03752)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(935, 829)
+rotation = 3.14159
+scale = Vector2(1.17315, 1.00419)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(1284, 824)
+rotation = 3.14159
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(444, -59)
+scale = Vector2(1.12708, 0.980456)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(824, -59)
+scale = Vector2(1.14286, 1.00293)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(1339, -54)
+rotation = 1.5708
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(1339, 402)
+rotation = 1.5708
+scale = Vector2(1.05277, 0.91542)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(-64, 370)
+rotation = 4.71239
+scale = Vector2(1.06558, 1.06679)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_jkhq4")]
+position = Vector2(-68, 368)
+rotation = 4.71239
+scale = Vector2(-0.973854, 1.05561)
