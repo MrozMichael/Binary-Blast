@@ -1,21 +1,21 @@
 [gd_scene load_steps=13 format=3 uid="uid://pyria0kjh4oq"]
 
-[ext_resource type="Texture2D" uid="uid://cb2c2t3k65p7w" path="res://assets/Robot/PNG/Poses HD/character_robot_idle.png" id="1_evflx"]
-[ext_resource type="Script" path="res://player.gd" id="1_m4yf0"]
-[ext_resource type="Texture2D" uid="uid://chhaxc5wvgp0k" path="res://assets/Robot/PNG/Poses HD/character_robot_walk0.png" id="2_yx4kv"]
-[ext_resource type="Texture2D" uid="uid://m8lmm1d6luss" path="res://assets/Robot/PNG/Poses HD/character_robot_walk1.png" id="3_ed4l5"]
-[ext_resource type="Texture2D" uid="uid://dt526qcx7uufi" path="res://assets/Robot/PNG/Poses HD/character_robot_walk2.png" id="4_c0chj"]
-[ext_resource type="Texture2D" uid="uid://dhjdfwv0hxbt8" path="res://assets/Robot/PNG/Poses HD/character_robot_walk3.png" id="5_7ajar"]
-[ext_resource type="Texture2D" uid="uid://do12jmielcxb6" path="res://assets/Robot/PNG/Poses HD/character_robot_walk4.png" id="6_lp3e4"]
-[ext_resource type="Texture2D" uid="uid://cry0vdd12o04i" path="res://assets/Robot/PNG/Poses HD/character_robot_walk5.png" id="7_fox7h"]
-[ext_resource type="Texture2D" uid="uid://cqoo8isnjcgub" path="res://assets/Robot/PNG/Poses HD/character_robot_walk6.png" id="8_ycwjo"]
-[ext_resource type="Texture2D" uid="uid://bjgc5xg4r3act" path="res://assets/Robot/PNG/Poses HD/character_robot_walk7.png" id="9_uthjw"]
+[ext_resource type="Script" path="res://Player.gd" id="1_pv5fx"]
+[ext_resource type="Texture2D" uid="uid://cb2c2t3k65p7w" path="res://assets/Robot/PNG/Poses HD/character_robot_idle.png" id="2_urv61"]
+[ext_resource type="Texture2D" uid="uid://chhaxc5wvgp0k" path="res://assets/Robot/PNG/Poses HD/character_robot_walk0.png" id="3_7370l"]
+[ext_resource type="Texture2D" uid="uid://m8lmm1d6luss" path="res://assets/Robot/PNG/Poses HD/character_robot_walk1.png" id="4_mp0wx"]
+[ext_resource type="Texture2D" uid="uid://dt526qcx7uufi" path="res://assets/Robot/PNG/Poses HD/character_robot_walk2.png" id="5_yskqe"]
+[ext_resource type="Texture2D" uid="uid://dhjdfwv0hxbt8" path="res://assets/Robot/PNG/Poses HD/character_robot_walk3.png" id="6_32lnn"]
+[ext_resource type="Texture2D" uid="uid://do12jmielcxb6" path="res://assets/Robot/PNG/Poses HD/character_robot_walk4.png" id="7_hya67"]
+[ext_resource type="Texture2D" uid="uid://cry0vdd12o04i" path="res://assets/Robot/PNG/Poses HD/character_robot_walk5.png" id="8_44eo7"]
+[ext_resource type="Texture2D" uid="uid://cqoo8isnjcgub" path="res://assets/Robot/PNG/Poses HD/character_robot_walk6.png" id="9_gesgm"]
+[ext_resource type="Texture2D" uid="uid://bjgc5xg4r3act" path="res://assets/Robot/PNG/Poses HD/character_robot_walk7.png" id="10_e4wnl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gc4dc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_evflx")
+"texture": ExtResource("2_urv61")
 }],
 "loop": true,
 "name": &"idle",
@@ -23,28 +23,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_yx4kv")
+"texture": ExtResource("3_7370l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ed4l5")
+"texture": ExtResource("4_mp0wx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_c0chj")
+"texture": ExtResource("5_yskqe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_7ajar")
+"texture": ExtResource("6_32lnn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_lp3e4")
+"texture": ExtResource("7_hya67")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_fox7h")
+"texture": ExtResource("8_44eo7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_ycwjo")
+"texture": ExtResource("9_gesgm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_uthjw")
+"texture": ExtResource("10_e4wnl")
 }],
 "loop": true,
 "name": &"move",
@@ -53,10 +53,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yxu2t"]
 radius = 52.0
-height = 146.0
+height = 150.0
 
-[node name="Player" type="Area2D"]
-script = ExtResource("1_m4yf0")
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pv5fx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-147, 369)

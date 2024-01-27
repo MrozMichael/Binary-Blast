@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 var speed = 400; 
 
@@ -19,13 +19,13 @@ func _process(delta):
 		velocity.x += 1;
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed;
-		$AnimatedSprite2D.play("move")
+		$AnimatedSprite2D.play("move");
 	else:
-		$AnimatedSprite2D.play("idle")
+		$AnimatedSprite2D.play("idle");
 	position += velocity * delta;
 	position = position.clamp(Vector2.ZERO, screen_size);
 	
-	
+
 
 
 	
