@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxnfpe77ug6v1"]
+[gd_scene load_steps=7 format=3 uid="uid://cxnfpe77ug6v1"]
 
 [ext_resource type="PackedScene" uid="uid://ylbre3srebf1" path="res://Border.tscn" id="1_jkhq4"]
+[ext_resource type="Script" path="res://Main.gd" id="1_x366s"]
 [ext_resource type="PackedScene" uid="uid://b7b0ioau0qtc1" path="res://Enemy.tscn" id="2_4jodo"]
 [ext_resource type="PackedScene" uid="uid://pyria0kjh4oq" path="res://Player.tscn" id="2_f0dyv"]
 [ext_resource type="Texture2D" uid="uid://be1apljbonl1h" path="res://assets/kenney_background-elements-redux/PNG/Default/bushOrange2.png" id="3_a2ij7"]
 
+[sub_resource type="Curve2D" id="Curve2D_7j8ds"]
+
 [node name="Main" type="Node2D"]
+script = ExtResource("1_x366s")
 metadata/_edit_horizontal_guides_ = [-531.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -22,6 +26,7 @@ position = Vector2(787, -3)
 collision_layer = 2
 
 [node name="Enemy" parent="." instance=ExtResource("2_4jodo")]
+unique_name_in_owner = true
 
 [node name="BushOrange19" type="Sprite2D" parent="."]
 position = Vector2(913, 579)
@@ -71,3 +76,6 @@ scale = Vector2(1.06558, 1.06679)
 position = Vector2(-68, 368)
 rotation = 4.71239
 scale = Vector2(-0.973854, 1.05561)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_7j8ds")

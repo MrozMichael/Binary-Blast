@@ -11,7 +11,8 @@ height = 98.0
 position = Vector2(253, 110)
 script = ExtResource("1_n8y1u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="EnemySprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(84, 104)
 scale = Vector2(0.0823508, 0.0704045)
 texture = ExtResource("2_fi1dt")

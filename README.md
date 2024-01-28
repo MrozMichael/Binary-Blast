@@ -9,7 +9,7 @@ First game jam/ first time using a game engine. ^_^
 
 ##########TODOS#######
 
-1. Add HP for player that decreases on collision with enemy
+1. Add HP for player that decreases on collision with enemy 
 2. Add 0s and 1s ammo for player to pickup, despawn after time
 3. create visual (and coded) array to store ammo
 4. create fire button to destroy enemy if array = correct value
