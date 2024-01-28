@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://pyria0kjh4oq"]
+[gd_scene load_steps=16 format=3 uid="uid://pyria0kjh4oq"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_pv5fx"]
 [ext_resource type="Texture2D" uid="uid://cb2c2t3k65p7w" path="res://assets/Robot/PNG/Poses HD/character_robot_idle.png" id="2_urv61"]
@@ -52,8 +52,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yxu2t"]
-radius = 52.0
+radius = 56.0
 height = 150.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_86p1k"]
+radius = 66.0
+height = 166.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctxpr"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cypv0"]
+bg_color = Color(0, 0.72549, 0.211765, 1)
+corner_radius_top_left = 1
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(747, 3)
@@ -64,11 +75,34 @@ script = ExtResource("1_pv5fx")
 position = Vector2(-147, 369)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-153, 352.063)
+position = Vector2(-267, 313)
 scale = Vector2(0.760417, 0.749512)
 sprite_frames = SubResource("SpriteFrames_gc4dc")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-156, 381)
+position = Vector2(-268, 340)
 shape = SubResource("CapsuleShape2D_yxu2t")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-171, 381)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-100, -39)
+shape = SubResource("CapsuleShape2D_86p1k")
+debug_color = Color(0.862745, 0.317647, 0.439216, 0.419608)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -379.0
+offset_top = 227.0
+offset_right = -168.0
+offset_bottom = 257.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_ctxpr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_cypv0")
+max_value = 5.0
+step = 1.0
+value = 5.0
+show_percentage = false

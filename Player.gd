@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 var speed = 400; 
+
+var hp = 5
 	
 func _process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -11,10 +13,13 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.play("idle");
 	
+	var hit = %HitBox.get_overlapping_bodies();
+	if hit.size() > 0:
+		hp -= 1 * delta; #prolly need to mult by delta
+		%HealthBar.value = hp;
+		
 
-
-
-
+	
 
 	
 	
