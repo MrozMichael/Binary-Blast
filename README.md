@@ -18,6 +18,6 @@ First game jam/ first time using a game engine. ^_^
 
 
   ####Bonus tasks####
-  Spawn enemies with randomly chosen value (~1-255)
+  Increase num enemy types
   create score
   create game over/instructions screens
