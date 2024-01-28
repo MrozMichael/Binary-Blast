@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://decii87n0k28n"]
+
+[ext_resource type="Script" path="res://Enemy.gd" id="1_tdpfp"]
+[ext_resource type="Texture2D" uid="uid://bfrbj84dedfjg" path="res://assets/nums/2.png" id="2_fqh7t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ejn61"]
+radius = 37.0
+height = 98.0
+
+[node name="Two" type="CharacterBody2D"]
+position = Vector2(253, 110)
+script = ExtResource("1_tdpfp")
+
+[node name="TwoSprite" type="Sprite2D" parent="."]
+position = Vector2(66.6761, 91.2647)
+scale = Vector2(0.136488, 0.110202)
+texture = ExtResource("2_fqh7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(71, 94)
+shape = SubResource("CapsuleShape2D_ejn61")
